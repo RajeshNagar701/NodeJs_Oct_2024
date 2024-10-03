@@ -18,37 +18,35 @@
 		var hindi=document.getElementById('hindi').value;
 		var gujarati=document.getElementById('gujarati').value;
 		
-		var total;
-		total=+english + +hindi + +gujarati;
+		var total=+english + +hindi + +gujarati;
+		document.getElementById('total').innerHTML="Total Marks is : "+total;
 		
-		document.getElementById('total').innerHTML=total;
+		var per=(total*100)/300;
+		document.getElementById('per').innerHTML="Total Percentages : " +per+"%";
 		
-		
-		var per;
-		per=(total/300)*100;
-		document.getElementById('per').innerHTML=per;
-		
-		if(per>=90)
+		if(per>70)
 		{
-		document.getElementById('grade').innerHTML="Grade : A";
+			document.getElementById('grade').innerHTML="Grade : Distinction";
 		}
-		else if(per>=70)
+		else if(per>60)
 		{
-		document.getElementById('grade').innerHTML="Grade : B";
+			document.getElementById('grade').innerHTML="Grade :First Class";
 		}
-		else if(per>=50)
+		else if(per>50)
 		{
-		document.getElementById('grade').innerHTML="Grade : C";
+			document.getElementById('grade').innerHTML="Grade :Second Class";
 		}
-		else if(per>=40)
+		else if(per>40)
 		{
-		document.getElementById('grade').innerHTML="Grade : D";
+			document.getElementById('grade').innerHTML="Grade :Pass Class";
 		}
 		else
 		{
-		document.getElementById('grade').innerHTML="fail";
+			document.getElementById('grade').innerHTML="Grade :Fail";
 		}
+		
 		return false;
+		
 	}
 	
 </script>
