@@ -67,21 +67,25 @@ function validate()
 
 
 <script>
+
+
+// this  keyword 
 function validate1(argu)  
 {
 	
 	if(argu.username.value=="")
 	{
-		document.getElementById('msg').innerHTML="User name field is required !"
+		document.getElementById("msg").innerHTML="User Name field is required";
 		argu.username.focus();
 		return false;
 	}
 	if(argu.password.value=="")
 	{
-		document.getElementById('msg').innerHTML="password field is required !"
+		document.getElementById("msg").innerHTML="Password field is required";
 		argu.password.focus();
 		return false;
 	}
+
 }
 
 </script>
