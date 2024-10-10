@@ -159,10 +159,6 @@ function reg_form(str)
 	
 	
 	
-	
-	
-	
-	
 	//below function is for image validation
 	function check(file)
 	{
