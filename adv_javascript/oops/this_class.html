@@ -1,0 +1,25 @@
+<script>
+class abc
+{
+	// magic func that call automatecaly
+	constructor(a,b,c)
+	{
+		this.x=a;
+		this.y=b;
+		this.z=c;
+	}
+	sum() 
+	{
+		document.write(this.x+this.y +"<br>");
+	}
+	multi()
+	{
+		document.write(this.x*this.y*this.z +"<br>");
+	}
+}
+var obj=new abc(5,5,10);
+obj.sum();
+obj.multi();
+</script>
+
+
