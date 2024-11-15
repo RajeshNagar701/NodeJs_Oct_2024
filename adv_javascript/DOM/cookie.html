@@ -60,7 +60,7 @@ If you do this, you will also have to use the corresponding unescape() function 
                   return;
                }
 							//Escape characters in JavaScript
-               cookievalue = escape(document.myform.customer.value) + ";";
+               cookievalue = document.myform.customer.value + ";";
                document.cookie = "name=" + cookievalue;
                document.write ("Setting Cookies : " + "name=" + cookievalue );
             }
