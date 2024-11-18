@@ -1,0 +1,73 @@
+
+
+<script>
+/*
+
+class abc
+{
+	constructor(a,b)
+	{
+		this.x=a;
+		this.y=b;
+	}
+	sum() 
+	{
+		document.write(this.x+this.y +"<br>");
+	}
+	multi()
+	{
+		document.write(this.x*this.y +"<br>");
+	}
+}
+
+var obj=new abc(5,5);
+obj.sum();
+obj.multi();
+
+*/
+
+</script>
+
+<script>
+class abc
+{
+	constructor(a,b)
+	{
+		this.a=a;
+		this.b=b;
+	}
+	sum() 
+	{
+		document.write(this.a+this.b +"<br>");
+	}
+}
+class xyz extends abc
+{
+	constructor(a,b,c)
+	{
+		super(a,b)
+		this.c=c;
+	}
+	multi()
+	{
+		document.write(this.a*this.b*this.c+"<br>");
+	}
+}
+class pqr extends xyz
+{
+	constructor(a,b,c,d)
+	{
+		super(a,b,c)
+		this.d=d;
+	}
+	sub()
+	{
+		document.write(this.a*this.b*this.c-this.d+"<br>");
+	}
+}
+var obj=new pqr(5,5,7,10);
+obj.sum();
+obj.multi();
+obj.sub();
+</script>
+
