@@ -33,7 +33,7 @@ const person2 = {
   lastName: "Doe"
 }
 
-
-document.write(person.fullName.apply(person1,['Jhon@gmail.com','34']) + "<br>") // take array
 document.write(person.fullName.call(person2,'Jhon@gmail.com','34')) // take object
+document.write(person.fullName.apply(person1,['Jhon@gmail.com','34']) + "<br>") // take array
+
 </script>

@@ -10,33 +10,22 @@ With call(), an object can use a method belonging to another object.
 -->
 
 <script>
-
-/*
 const person = {
   firstName:"John",
   lastName: "Doe",
   fullName: function () {
-  
-    return this.firstName + " " + this.lastName;
+		return this.firstName + " " + this.lastName;
   }
 }
-*/
-// This will return "John Doe":
-//document.write(person.firstName); 
 
-//document.write(person.fullName());  
+// This will return "John Doe":
+document.write(person.firstName); 
+
+document.write(person.fullName());  
 
 
 //========================================================
 
-
-
-const person = {
-  email:"rajnagar@gmail.com",	
-  fullName: function() {
-    return this.firstName + this.lastName;
-  }
-}
 const person1 = {
   firstName:"John",
   lastName: "Doe"
@@ -46,6 +35,14 @@ const person2 = {
   firstName:"Mary",
   lastName: "Doe"
 }
+
+const person = {
+  email:"rajnagar@gmail.com",	
+  fullName: function() {
+    return this.firstName + this.lastName;
+  }
+}
+
 //document.write(person.email);
 //document.write(person.fullName());
 
