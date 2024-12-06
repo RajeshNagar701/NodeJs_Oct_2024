@@ -7,6 +7,12 @@ if(input[2]=='add')
 {
 	fs.writeFileSync(input[3],input[4]);
 }
+else if(input[2]=='read')
+{
+	fs.readFile(input[3],'utf8',(err,data)=>{
+		console.log(data);
+	})
+}
 else if(input[2]=='remove')
 {
 	fs.unlinkSync(input[3]);
@@ -19,4 +25,5 @@ else
 
 
 //cmd : node index.js add myfile.txt 'hi hello'  // add file
-//cmd : node index.js remove myfile.txt  // remove file
+//cmd : node index.js read myfile.txt		    // read file
+//cmd : node index.js remove myfile.txt  		// remove file
