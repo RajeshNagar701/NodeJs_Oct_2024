@@ -21,6 +21,10 @@ const middleware =(req,resp,next)=>
 // all routes must first filter that conditions
 app.use(middleware);  //  Not work any routes if condition not true 
 
+
+// 
+
+
 app.get('/',(_,resp)=>{
 	 resp.send("You are eligible for website Home page")
 })
