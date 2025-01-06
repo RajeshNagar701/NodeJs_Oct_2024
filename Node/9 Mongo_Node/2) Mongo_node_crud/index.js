@@ -1,7 +1,7 @@
 
 const dbConnect= require('./conn');
 
-/*
+
 // SELECT ALL USER COLLECTION DATA
 
 const getdata=async ()=>{
@@ -11,7 +11,6 @@ const getdata=async ()=>{
 }
 getdata();
 
-*/
 
 /*
 // SELECT SINGLE COLLECTION DATA
@@ -57,7 +56,7 @@ const updateData=async ()=>{
 updateData();
 */
 
-
+/*
 const deleteData=async ()=>{
 let data = await dbConnect();
 let result = await data.deleteMany({name:'patelRaj'})
@@ -65,5 +64,5 @@ console.warn("data is Deleted")
 }
  
 deleteData();
-
+*/
 

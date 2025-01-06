@@ -12,7 +12,7 @@ app.get('/getdata', async (req, resp) => {
     resp.send(data);
 });
 
-//http://localhost:5000/getsingle2?id=5
+//http://localhost:5000/getsingle
 
 // get single or particular column data 
 app.get('/getsingle1', async (req, resp) => {
