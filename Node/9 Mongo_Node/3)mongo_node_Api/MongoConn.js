@@ -2,7 +2,7 @@
 
 const {MongoClient}=require('mongodb') // 1) impload mongodb
 const url='mongodb://localhost:27017/';  // 2) mongodb server path fix
-const databaseName='node9th';   // 3) our mongodb compass database name
+const databaseName='shopping';   // 3) our mongodb compass database name
 const client=new MongoClient(url);  // 4) Create object for connectivity
 
 
