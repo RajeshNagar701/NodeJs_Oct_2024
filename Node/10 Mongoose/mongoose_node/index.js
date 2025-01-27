@@ -11,7 +11,8 @@ var usersSchema=mongoose.Schema({
 	id:Number,
     name:String,
     email:String,
-    password:String
+    password:String,
+	status:String
 });
 
 // create model/table appy validation on table coumn
@@ -75,23 +76,53 @@ app.delete("/delete_user/:_id", async (req, resp) => {
     resp.send(data);
 })
 
-app.get("/login", async (req, resp) => {
- 
+/*
+app.get("/login1", async (req, resp) => {
 	console.log(req.body);
 	let data = await userModel.find({
-		$and:[{"email":req.body.email},{"password": req.body.password}]
+		$and:[{"email":req.body.email},{"password":req.body.password}]
 	});
+	//resp.send(data);
 	if(data.length>0)
 	{
-		resp.send({"msg":"Login success"});	
+		resp.send({'success':"Login success"});
 	}
 	else
 	{
-		resp.send({"msg":"Login Failed due to Wrong Credencial"});	
+		resp.send({'failed':"Login Failed"});
 	}
-    
+});
+*/
+app.get("/login2", async (req, resp) => {
+	console.log(req.body);
+	let data = await userModel.find({"email":req.body.email});
+	//resp.send(data);
+	if(data.length>0)
+	{
+		if(data[0].password==req.body.password)
+		{
+			
+			if(data[0].status=="Unblock")
+			{
+				resp.send({'success':"Login Success"});
+			}
+			else
+			{
+				resp.send({'Failed':"Blocked Account so Contact Company"});
+			}
+		}
+		else
+		{
+			resp.send({'Failed':"Wrong Password so Login Filed"});
+		}
+	}
+	else
+	{
+		resp.send({'Failed':"Email Does't Exist so Login Filed"});
+	}
 	
-})
+});
+
 
 //===================================================================
 
